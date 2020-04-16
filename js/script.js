@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 tabContent[b].classList.add('show');
             }
         }
-
+// DELEGATION 
         info.addEventListener('click', function(event) {
             let target = event.target;
             if (target && target.classList.contains('info-header-tab')) {
