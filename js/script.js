@@ -44,10 +44,10 @@ window.addEventListener('DOMContentLoaded', function () {
             hours = Math.floor((t / (1000 * 60 * 60)));
 
         return { // об"єкт що повертається
-            'total' : t,
-            'hours' : hours,
-            'minutes' : minutes,
-            'seconds' : seconds
+            'total': t,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
         };
     }
 
@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', function () {
         let timer = document.getElementById(id),
             hours = timer.querySelector('.hours'),
             minutes = timer.querySelector('.minutes'),
-            seconds = timer.querySelector('.seconds');
+            seconds = timer.querySelector('.seconds'),
             timeInterval = setInterval(updateClock, 1000);
 
         function updateClock() {
@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', function () {
             hours.textContent = t.hours;
             minutes.textContent = t.minutes;
             seconds.textContent = t.seconds;
-           
+
 
             if (t.total <= 0) {
                 clearInterval(timeInterval); //зупинка таймера
@@ -82,5 +82,4 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
     setClock('timer', deadline);
-
-})
+});
