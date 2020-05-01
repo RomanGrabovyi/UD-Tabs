@@ -85,17 +85,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //Modal
     let more = document.querySelector('.more'),
-        descr = document.querySelectorAll('.description .description-btn'),
         overlay = document.querySelector('.overlay'),
         close = document.querySelector('.popup-close');
 
-    descr.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-            overlay.style.display = 'block';
-            this.classList.add('.more-splash');
-            document.body.style.overflow = 'hidden';
-        })
-    })
     more.addEventListener('click', () => {
         overlay.style.display = 'block';
         this.classList.add('.more-splash');
